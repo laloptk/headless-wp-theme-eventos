@@ -30,8 +30,8 @@ src/
 ### 1. Clone and install dependencies
 
 ```bash
-git clone [https://github.com/laloptk/headless-wp-theme-eventos.git](https://github.com/laloptk/headless-wp-theme-eventos.git)
-cd react-headless-wp
+git clone https://github.com/laloptk/headless-wp-theme-eventos.git
+cd headless-wp-theme-eventos
 npm install
 ```
 
@@ -40,9 +40,8 @@ npm install
 Create a `.env` file in the root folder and add this env variables (Not recommended for production, just for local development enviroments):
 
 ```env
-VITE_WP_SITE_URL=http://practice.local/
-VITE_WP_USER=admin
-VITE_WP_APP_PASSWORD=xxxx xxxx xxxx xxxx  
+VITE_WP_SITE_URL=http://practice.local/ # The url of the website that contains your WordPress installation
+VITE_WP_APP_PASSWORD=xxxx xxxx xxxx xxxx  # Your WordPress Application Pasword
 ```
 [How to get your WordPress App Password.](https://make.wordpress.org/core/2020/11/05/application-passwords-integration-guide/)
 
