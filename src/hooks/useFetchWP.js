@@ -5,14 +5,14 @@ const useFetchWP = (type = 'posts') => {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
-    const hasFetched = useRef
+    const hasFetched = useRef(false)
     const fetchWp = new FetchWP()
     useEffect(() => {
         const fetchData = async () => {
             if (hasFetched.current) return;
+            setLoading(true)
+            
             try {
-                console.log("loading")
-                setLoading(true)
                 switch(type) {
                     case 'posts':
                         const posts = await fetchWp.getPosts();
@@ -50,6 +50,7 @@ const useFetchWP = (type = 'posts') => {
             }
         }
         fetchData()
+        console.log(data)
     }, [type])
 
     return { data, loading, error }
