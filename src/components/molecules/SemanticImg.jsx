@@ -13,3 +13,5 @@ const SemanticImg = ({ src, alt, className }) => {
         </figure>
     )
 }
+
+export default SemanticImg
