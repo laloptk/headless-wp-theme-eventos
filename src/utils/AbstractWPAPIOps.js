@@ -1,4 +1,4 @@
-// Abstract base class
+
 class WpApiOps {
   constructor() {
     if (new.target === WpApiOps) {
