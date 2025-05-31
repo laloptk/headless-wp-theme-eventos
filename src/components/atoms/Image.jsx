@@ -1,4 +1,4 @@
-const Image = ({ src, alt, className }) => {
+const Image = ({ src = '', alt = '', className = '' }) => {	
     return (
         <img
             src={src}

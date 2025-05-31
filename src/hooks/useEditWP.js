@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import EditWP from '../utils/EditWP';
 
-const useEditWP = (body = {}, params = {}) => {
+const useEditWP = (params = {type: 'posts'}) => {
     const { status, setStatus } = useState(null);   
     const { error, setError } = useState(null);
 
@@ -10,7 +10,7 @@ const useEditWP = (body = {}, params = {}) => {
         const fetchData = async () => {
             try {
                 // Example of using the EditWP methods
-                const response = await editWp.updatePosts();
+                const response = await editWp.createPost(params.type, params.body);
                 setStatus(response);
             } catch (error) {
                 setError(`Error editing data: ${error}`);
